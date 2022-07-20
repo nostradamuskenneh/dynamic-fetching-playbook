@@ -1,0 +1,55 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+  - name: Installing httpd
+    package:
+      name: httpd
+      state: present
+
+  - name: starting httpd
+    service:
+      name: httpd
+      state: started
+
+  - name: starting httpd
+    service:
+      name: httpd
+      enabled: yes
+        
+  - name: Installing git
+    package:
+      name: git
+      state: present
+
+
+- hosts: web
+  become: yes
+  tasks:
+
+   - name: cloning github repo
+     git:
+       repo: https://github.com/oumarkenneh/ecomm-1.git
+       dest: /var/www/html
+
+
+- hosts: app
+  become: yes
+  tasks:
+
+   - name: cloning github repo
+     git:
+       repo: https://github.com/oumarkenneh/candy-crush.git 
+       dest: /var/www/html
+
+
+
+- hosts: db
+  become: yes
+  tasks:
+
+   - name: cloning github repo
+     git:
+       repo: https://github.com/oumarkenneh/food-1.git
+       dest: /var/www/html
