@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+
+  - name: dynamic fetching of app
+    copy:
+      src: httpd.conf
+      dest: /etc/httpd/conf/httpd.conf
+
