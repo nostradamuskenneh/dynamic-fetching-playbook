@@ -30,7 +30,7 @@
 
    - name: cloning github repo
      git:
-       repo: https://github.com/oumarkenneh/ecomm-1.git
+       repo: https://github.com/nostradamuskenneh/ecomm-1.git
        dest: /var/www/html
 
 
@@ -40,7 +40,7 @@
 
    - name: cloning github repo
      git:
-       repo: https://github.com/oumarkenneh/candy-crush.git 
+       repo: https://github.com/nostradamuskenneh/candy-crush.git 
        dest: /var/www/html
 
 
@@ -51,5 +51,5 @@
 
    - name: cloning github repo
      git:
-       repo: https://github.com/oumarkenneh/food-1.git
+       repo: https://github.com/nostradamuskenneh/food-1.git
        dest: /var/www/html
